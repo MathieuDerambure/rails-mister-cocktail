@@ -1,0 +1,10 @@
+<tbody>
+    <% @cocktails.each do |cocktail| %>
+      <ul>
+        <li><%= link_to cocktail.name, cocktail  %></li>
+
+      </ul>
+    <% end %>
+</tbody>
+
+<%= link_to "add Cocktail", new_cocktail_path %>
