@@ -12,3 +12,4 @@ Ingredient.create(name: "mint leaves")
 
 
 Cocktail.create(name: "john")
+Cocktail.create(name: "johnny")
