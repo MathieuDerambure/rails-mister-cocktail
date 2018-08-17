@@ -1,0 +1,67 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+ }
+
+.card {
+  flex: 1 1 auto;
+  position:relative;
+  margin: 20px;
+  padding: 5px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.card-body {
+color: white;
+position:relative;
+height: 180px;
+background-size:cover;
+}
+
+.card-category {
+position: absolute;
+top: 5px;
+left: 5px;
+text-transform: uppercase;
+
+}
+
+.card-description {
+position: absolute;
+left: 5px;
+bottom: 5px;
+}
+
+
+.card-user {
+position: absolute;
+right: 5px;
+top: 5px;
+}
+
+.card-link {
+position: absolute;
+top:0;
+bottom:0;
+width: 100%;
+z-index: 20;
+background: black;
+opacity: 0;
+}
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.card-footer p {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.controls i {
+    padding: 10px;
+}

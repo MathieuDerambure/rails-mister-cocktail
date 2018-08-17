@@ -1,22 +1,25 @@
-<tbody>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(225,169,168,0.8) 30%, rgba(2,255,246,0.6) 99%), url(<%= cl_image_path("klabjczcetyg2rdhecwc", width: 400, height: 300, crop: :fill) %>);">
+  <div class="banner-content">
+    <h1> Oh My God Becky ! Cocktails !</h1>
+    <p> It's going to be amazing ! </p>
+  </div>
+</div>
 
-  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(225,169,168,0.8) 30%, rgba(2,255,246,0.6) 99%), url(<%= cl_image_path("klabjczcetyg2rdhecwc", width: 400, height: 300, crop: :fill) %>);">
-    <div class="banner-content">
-      <h1> Oh My God Becky ! Cocktails !</h1>
-      <p> It's going to be amazing ! </p>
-    </div>
+<div class ="container">
+  <div class="btn-medium">
+    <%= link_to "Add a Cocktail Becky", new_cocktail_path %>
   </div>
 
-  <div class="btn-medium"><%= link_to "Add a Cocktail Becky", new_cocktail_path %>
+  <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-lg-4">
+           <div class="card">
+            <h2> <%= link_to cocktail.name, cocktail  %></h2>
+           </div>
+        </div>
+      <% end %>
   </div>
-
-  <div>
-    <% @cocktails.each do |cocktail| %>
-      <ul>
-        <li><%= link_to cocktail.name, cocktail  %></li>
-      </ul>
-    <% end %>
-  </div>
+</div>
 
 
 
@@ -24,7 +27,6 @@
 
 
 
-</tbody>
 
 
 
