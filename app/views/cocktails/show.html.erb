@@ -8,6 +8,10 @@
     <% @cocktail.ingredients.each do |ingredient| %>
     <li><%= ingredient.name %></li>
     <% end %>
+
 </ul>
 
-<%= link_to "Add new dose", new_cocktail_dose_path(@cocktail) %>
+<%= link_to "Becky, edit that", edit_cocktail_path(@cocktail)  %>
+<%= link_to "Becky, add something new", new_cocktail_dose_path(@cocktail) %>
+<%= link_to "Go Back Becky", cocktails_path %>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
